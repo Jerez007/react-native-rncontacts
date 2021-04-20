@@ -1,7 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {Text, View} from 'react-native';
-import { LOGIN, REGISTER } from '../constants/routeNames';
+import {LOGIN, REGISTER} from '../constants/routeNames';
 
 const Login = () => {
   return (

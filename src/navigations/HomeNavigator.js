@@ -1,39 +1,15 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Text, View} from 'react-native';
-import { CONTACT_DETAIL, CONTACT_LIST, CREATE_CONTACT, SETTINGS } from '../constants/routeNames';
-
-const Contacts = () => {
-  return (
-    <View>
-      <Text>Hi from Contacts</Text>
-    </View>
-  );
-};
-
-const ContactDetail = () => {
-  return (
-    <View>
-      <Text>Hi from ContactDetail</Text>
-    </View>
-  );
-};
-
-const Settings = () => {
-  return (
-    <View>
-      <Text>Hi from Settings</Text>
-    </View>
-  );
-};
-
-const CreateContact = () => {
-  return (
-    <View>
-      <Text>Hi from CreateContact</Text>
-    </View>
-  );
-};
+import {
+  CONTACT_DETAIL,
+  CONTACT_LIST,
+  CREATE_CONTACT,
+  SETTINGS,
+} from '../constants/routeNames';
+import Contacts from '../screens/Contacts';
+import ContactDetail from '../screens/Contacts/ContactDetail';
+import CreateContact from '../screens/Contacts/CreateContact';
+import Settings from '../screens/Contacts/Settings';
 
 const HomeNavigator = () => {
   const HomeStack = createStackNavigator();
