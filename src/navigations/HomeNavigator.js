@@ -7,9 +7,9 @@ import {
   SETTINGS,
 } from '../constants/routeNames';
 import Contacts from '../screens/Contacts';
-import ContactDetail from '../screens/Contacts/ContactDetail';
-import CreateContact from '../screens/Contacts/CreateContact';
-import Settings from '../screens/Contacts/Settings';
+import ContactDetail from '../screens/Contacts';
+import CreateContact from '../screens/Contacts';
+import Settings from '../screens/Settings';
 
 const HomeNavigator = () => {
   const HomeStack = createStackNavigator();
