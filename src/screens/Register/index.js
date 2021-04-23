@@ -1,18 +1,41 @@
 import React, {useState} from 'react';
 import {Text, View} from 'react-native';
 import RegisterComponent from '../../components/Signup';
+import envs from '../../config/env';
+import axiosInstance from '../../helpers/axiosInterceptor';
 
 const Register = () => {
   const [form, setForm] = useState({});
   const [errors, setErrors] = useState({});
 
+  React.useEffect(() => {
+    axiosInstance.get('/contacts').catch(err => {
+      console.log('err', err.response);
+    });
+  }, []);
+
   const onChange = ({name, value}) => {
     setForm({...form, [name]: value});
 
     if (value !== '') {
-      setErrors(prev => {
-        return {...prev, [name]: null};
-      });
+      if (name === 'password') {
+        if (value.length < 6) {
+          setErrors(prev => {
+            return {
+              ...prev,
+              [name]: 'Passwords have to be at least 6 characters long',
+            };
+          });
+        } else {
+          setErrors(prev => {
+            return {...prev, [name]: null};
+          });
+        }
+      } else {
+        setErrors(prev => {
+          return {...prev, [name]: null};
+        });
+      }
     } else {
       setErrors(prev => {
         return {...prev, [name]: 'This field is required'};

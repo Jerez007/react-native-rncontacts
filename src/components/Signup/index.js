@@ -3,7 +3,7 @@ import React from 'react';
 import {Image, Text, Touchable, TouchableOpacity, View} from 'react-native';
 import Container from '../common/Container';
 import CustomButton from '../common/CustomButton';
-import Input from '../common/input';
+import Input from '../common/Input';
 import {LOGIN} from '../../constants/routeNames';
 import styles from './styles';
 import {onChange} from 'react-native-reanimated';

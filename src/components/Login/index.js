@@ -3,7 +3,7 @@ import React from 'react';
 import {Image, Text, Touchable, TouchableOpacity, View} from 'react-native';
 import Container from '../../components/common/Container';
 import CustomButton from '../../components/common/CustomButton';
-import Input from '../../components/common/input';
+import Input from '../../components/common/Input';
 import {REGISTER} from '../../constants/routeNames';
 import styles from './styles';
 
